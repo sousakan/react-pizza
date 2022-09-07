@@ -1,0 +1,22 @@
+{
+  // Форматирование кода с помощью prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Форматирование при сохранении файла
+  "editor.formatOnSave": true,
+
+  // Использование локальных правил для StyleLint
+  "stylelint.useLocal": true,
+  "stylelint.autoFixOnSave": true,
+
+  // Проверка орфографии с помощью Code Spell Checker
+  "cSpell.language": "en,ru",
+
+  // Дополнительный словарь для Code Spell Checker
+  "cSpell.words": ["antd", "reduxjs"],
+  "cSpell.ignorePaths": ["**/**", "!**/**{.js,jsx,ts,tsx}"],
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
