@@ -1,0 +1,39 @@
+.search {
+  width: 300px;
+}
+
+.search::before {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+
+  display: block;
+
+  width: 22px;
+  height: 22px;
+
+  opacity: 0.2;
+  background-image: url('../../assets/icons/search.svg');
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 20px 12px 42px;
+
+  font-size: 16px;
+
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  outline: none;
+
+  &::placeholder {
+    color: rgb(0 0 0 / 40%);
+  }
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+}

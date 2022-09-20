@@ -1,0 +1,17 @@
+.header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 140px;
+
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.header__search {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

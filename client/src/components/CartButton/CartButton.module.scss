@@ -1,0 +1,38 @@
+@use 'sass:color';
+
+$bg: #fe5f1e;
+$dark-bg: color.adjust($bg, $lightness: -15%);
+
+.cart-button {
+  display: flex;
+  align-items: center;
+
+  padding: 15px 25px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+
+  background-color: $bg;
+  border-radius: 30px;
+
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: $dark-bg;
+  }
+}
+
+.cart-button__line {
+  width: 1px;
+  height: 25px;
+  margin: 0 13px;
+
+  opacity: 0.25;
+  background-color: currentcolor;
+}
+
+.cart-button__icon {
+  margin-right: 9px;
+}

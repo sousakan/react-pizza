@@ -1,0 +1,55 @@
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 132px;
+  height: 40px;
+  padding: 0 10px;
+
+  color: var(--primary);
+
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+
+  &:hover {
+    color: var(--white);
+
+    background-color: var(--primary);
+  }
+}
+
+.add-button_added {
+  width: 155px;
+}
+
+.add-button__icon,
+.add-button__text {
+  color: inherit;
+}
+
+.add-button__text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.add-button__count {
+  display: none;
+
+  width: 22px;
+  height: 22px;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.add-button_added .add-button__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

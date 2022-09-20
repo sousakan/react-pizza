@@ -1,0 +1,25 @@
+.page {
+  min-height: 100vh;
+  padding: 45px;
+
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 16px;
+
+  background-color: var(--border-bg);
+}
+
+.page__home {
+  padding-bottom: 25px;
+}
+
+.page__header {
+  margin-bottom: 40px;
+}
+
+.page__filters {
+  margin-bottom: 32px;
+}
+
+.page__catalog {
+  margin-bottom: 100px;
+}

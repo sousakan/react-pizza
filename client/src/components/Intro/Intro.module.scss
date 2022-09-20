@@ -1,0 +1,33 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 333px;
+  height: 45px;
+}
+
+.intro__icon {
+  display: block;
+
+  width: 38px;
+  height: 38px;
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intro__title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #181818;
+}
+
+.intro__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7b7b7b;
+}

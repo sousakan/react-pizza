@@ -1,0 +1,68 @@
+@use 'sass:color';
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 80vh;
+}
+
+.empty__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 550px;
+  margin: 0 auto;
+}
+
+.empty__title {
+  margin-bottom: 10px;
+
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.empty__text {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #777;
+  text-align: center;
+}
+
+.empty__img {
+  display: block;
+
+  width: 300px;
+  height: 255px;
+  margin-bottom: 40px;
+}
+
+.empty__button {
+  $bg: #282828;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 210px;
+  height: 46px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+
+  background-color: $bg;
+  border-radius: 30px;
+
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: color.adjust($bg, $lightness: 15%);
+  }
+}

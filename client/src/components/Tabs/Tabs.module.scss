@@ -1,0 +1,44 @@
+@use 'sass:color';
+
+.tabs {
+  display: flex;
+  column-gap: 9px;
+}
+
+.tabs__item {
+  $bg: #f9f9f9;
+  $color: #2c2c2c;
+  $dark-bg: color.adjust($bg, $lightness: -10%);
+  $dark-color: color.adjust($color, $lightness: -10%);
+
+  cursor: pointer;
+
+  padding: 15px 25px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: $color;
+
+  background-color: $bg;
+  border-radius: 30px;
+
+  transition: color 0.2s linear, background-color 0.2s linear;
+
+  &:hover {
+    color: $dark-color;
+
+    background-color: $dark-bg;
+  }
+}
+
+.tabs__item_active {
+  color: var(--white);
+
+  background-color: #282828;
+
+  &:hover {
+    color: var(--white);
+
+    background-color: #282828;
+  }
+}
