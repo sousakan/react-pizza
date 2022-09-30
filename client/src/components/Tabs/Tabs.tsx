@@ -2,8 +2,8 @@ import classNames from 'classnames';
 
 import styles from './Tabs.module.scss';
 
+import { setPage, updateCategory } from '../../features/catalog/slice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { setPage, updateCategory } from '../../slices/catalogSlice';
 import { PizzaCategories, pizzaCategoriesText } from '../../types/Pizza';
 
 const tabs: PizzaCategories[] = [

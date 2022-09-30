@@ -2,12 +2,9 @@ import classNames from 'classnames';
 
 import styles from './Search.module.scss';
 
+import { selectSearchValue } from '../../features/catalog/selectors';
+import { searchChanged, setPage } from '../../features/catalog/slice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import {
-  searchChanged,
-  selectSearchValue,
-  setPage,
-} from '../../slices/catalogSlice';
 
 interface Props {
   className?: string;

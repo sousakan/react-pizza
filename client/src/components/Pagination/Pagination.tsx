@@ -5,8 +5,9 @@ import styles from './Pagination.module.scss';
 
 import config from '../../config';
 
+import { selectPageNumber } from '../../features/catalog/selectors';
+import { setPage } from '../../features/catalog/slice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { selectPageNumber, setPage } from '../../slices/catalogSlice';
 
 interface Props {
   className?: string;

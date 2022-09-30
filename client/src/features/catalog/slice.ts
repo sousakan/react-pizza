@@ -1,8 +1,10 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import api from '../api';
-import { RootState } from '../app/store';
-import { ICatalogPizza, PizzaCategories, SortType } from '../types/Pizza';
+import { fetchCatalog } from './asyncActions';
+
+import api from '../../api';
+import { RootState } from '../../app/store';
+import { ICatalogPizza, PizzaCategories, SortType } from '../../types/Pizza';
 
 interface Initial {
   list: ICatalogPizza[];
@@ -23,10 +25,6 @@ const initialState: Initial = {
   displayedListSize: 0,
   pageNumber: 0,
 };
-
-export const fetchCatalog = createAsyncThunk('catalog/fetchCatalog', () => {
-  return api.catalog.get();
-});
 
 const catalogSlice = createSlice({
   name: 'catalog',
@@ -69,11 +67,6 @@ const catalogSlice = createSlice({
     });
   },
 });
-
-export const selectSearchValue = (state: RootState) =>
-  state.catalog.searchValue;
-
-export const selectPageNumber = (state: RootState) => state.catalog.pageNumber;
 
 export const {
   updateCategory,

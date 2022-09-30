@@ -6,77 +6,14 @@ import { setupServer } from 'msw/node';
 
 import { BrowserRouter } from 'react-router-dom';
 
+import { catalogCartData as catalogPizzas } from './data';
 import { getHandlers, renderWithProviders } from './test-utils';
 
 import Cart from '../components/Cart';
 import Catalog from '../components/Catalog';
+import { fetchCart } from '../features/cart/asyncActions';
+import { fetchCatalog } from '../features/catalog/asyncActions';
 import minPrice from '../helpers/minPrice';
-import { fetchCart } from '../slices/cartSlice';
-import { fetchCatalog } from '../slices/catalogSlice';
-import { ICatalogPizza } from '../types/Pizza';
-
-const catalogPizzas: ICatalogPizza[] = [
-  {
-    id: '1',
-    name: 'Чизбургер-пицца',
-    imgUrl: './pizzas/cheeseburger_pizza.png',
-    types: {
-      thin: {
-        inStock: true,
-        price: 50,
-      },
-      traditional: {
-        inStock: true,
-        price: 75,
-      },
-    },
-    sizes: {
-      S: {
-        inStock: true,
-        price: 30,
-      },
-      M: {
-        inStock: true,
-        price: 40,
-      },
-      L: {
-        inStock: true,
-        price: 45,
-      },
-    },
-    categories: ['meat', 'grill'],
-  },
-  {
-    id: '2',
-    name: 'Сырная',
-    imgUrl: './pizzas/cheese.png',
-    types: {
-      thin: {
-        inStock: true,
-        price: 45,
-      },
-      traditional: {
-        inStock: false,
-        price: 0,
-      },
-    },
-    sizes: {
-      S: {
-        inStock: true,
-        price: 100,
-      },
-      M: {
-        inStock: false,
-        price: 0,
-      },
-      L: {
-        inStock: false,
-        price: 0,
-      },
-    },
-    categories: ['vegetarian'],
-  },
-];
 
 const server = setupServer(...getHandlers(catalogPizzas));
 

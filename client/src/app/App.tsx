@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { setupStore } from './store';
 
+import { fetchCart } from '../features/cart/asyncActions';
+import { fetchCatalog } from '../features/catalog/asyncActions';
 import CartPage from '../pages/CartPage';
 
 import HomePage from '../pages/HomePage';
 import Page from '../pages/Page';
-import { fetchCart } from '../slices/cartSlice';
-import { fetchCatalog } from '../slices/catalogSlice';
 
 import './styles.scss';
 

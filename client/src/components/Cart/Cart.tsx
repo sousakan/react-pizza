@@ -5,9 +5,10 @@ import styles from './Cart.module.scss';
 import { ReactComponent as BackIcon } from '../../assets/icons/back_button_icon.svg';
 import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
 import { ReactComponent as TrashIcon } from '../../assets/icons/trash.svg';
+import { cleanCart } from '../../features/cart/asyncActions';
+import { selectCartSize } from '../../features/cart/selectors';
 import totalPrice from '../../helpers/totalPrice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { cleanCart, selectCartSize } from '../../slices/cartSlice';
 import Bar from '../Bar';
 import Empty from '../Empty';
 

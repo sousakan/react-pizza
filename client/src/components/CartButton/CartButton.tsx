@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styles from './CartButton.module.scss';
 
 import { ReactComponent as BasketIcon } from '../../assets/icons/basket.svg';
+import { selectCartPrice, selectCartSize } from '../../features/cart/selectors';
 import { useAppSelector } from '../../hooks/redux';
-import { selectCartPrice, selectCartSize } from '../../slices/cartSlice';
 
 const CartButton = () => {
   const cartPrice = useAppSelector(selectCartPrice);

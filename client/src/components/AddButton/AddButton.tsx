@@ -3,14 +3,11 @@ import classNames from 'classnames';
 import styles from './AddButton.module.scss';
 
 import { ReactComponent as PlusIcon } from '../../assets/icons/plus.svg';
+import { addToCart, incrementById } from '../../features/cart/asyncActions';
+import { selectCartPizza } from '../../features/cart/selectors';
+import { createCartPizza } from '../../features/cart/slice';
 import getCartPizzaId from '../../helpers/getCartPizzaId';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import {
-  addToCart,
-  createCartPizza,
-  incrementById,
-  selectCartPizza,
-} from '../../slices/cartSlice';
 import { ICatalogPizza, PizzaSize, PizzaType } from '../../types/Pizza';
 
 interface Props {

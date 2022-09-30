@@ -3,12 +3,13 @@ import styles from './Bar.module.scss';
 import { ReactComponent as IncrementIcon } from '../../assets/icons/add_counter.svg';
 import removeIcon from '../../assets/icons/remove_bar_icon.svg';
 import { ReactComponent as DecrementIcon } from '../../assets/icons/remove_counter.svg';
-import { useAppDispatch } from '../../hooks/redux';
 import {
   decrementById,
   incrementById,
   removeFromCart,
-} from '../../slices/cartSlice';
+} from '../../features/cart/asyncActions';
+import { useAppDispatch } from '../../hooks/redux';
+
 import { ICartPizza, pizzaSizeText, pizzaTypeText } from '../../types/Pizza';
 interface Props {
   bar: ICartPizza;

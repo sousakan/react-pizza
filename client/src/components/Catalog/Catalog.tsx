@@ -4,15 +4,13 @@ import { useEffect, useMemo, useState } from 'react';
 import styles from './Catalog.module.scss';
 
 import config from '../../config';
+import { selectSearchValue } from '../../features/catalog/selectors';
+import { updateDisplayedListSize } from '../../features/catalog/slice';
 import filterByCategory from '../../helpers/filterByCategory';
 import filterBySearchValue from '../../helpers/filterBySearchValue';
 import sortByNamePrice from '../../helpers/sortByNamePrice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import useDebounce from '../../hooks/useDebounce';
-import {
-  selectSearchValue,
-  updateDisplayedListSize,
-} from '../../slices/catalogSlice';
 import Card from '../Card';
 import SkeletonCard from '../SkeletonCard';
 

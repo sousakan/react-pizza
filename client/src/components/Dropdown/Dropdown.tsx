@@ -2,8 +2,8 @@ import classNames from 'classnames';
 
 import styles from './Dropdown.module.scss';
 
+import { changeOrder, updateType } from '../../features/catalog/slice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { changeOrder, updateType } from '../../slices/catalogSlice';
 import { SortType, sortTypeText } from '../../types/Pizza';
 
 const sortTypes: SortType[] = ['alphabetical', 'price'];
